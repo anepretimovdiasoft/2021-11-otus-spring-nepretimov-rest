@@ -2,10 +2,14 @@ package ru.diasoft;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ConfigurableApplicationContext;
-import ru.diasoft.rest.api.BookApi;
+import org.springframework.retry.annotation.EnableRetry;
 import ru.diasoft.service.Demo;
 
+
+@EnableRetry
+@EnableCaching
 @SpringBootApplication
 public class App {
 
